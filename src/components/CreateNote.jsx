@@ -17,26 +17,27 @@ function CreateNote(props){
     
     return (
         <div>
-            <form>
+            <form className={props.selected}>
                 <input 
-                onChange={handleInput} 
-                autoComplete="off" 
+                onChange={handleInput}
+                onClick={handleClick}
+                autoComplete="off"
                 name="user"
                 placeholder="Your name..."
                 value={input.user}
                 className={props.selected}
                 />
-                <textarea 
+                <textarea
                 onClick={handleClick}
                 onChange={handleInput} 
-                autoComplete="off" 
-                name="content" 
-                placeholder="Add a note..." 
+                autoComplete="off"
+                name="content"
+                placeholder="Add a note..."
                 rows={expanded ? "6" : "1"} 
                 value={input.content}
-                className={props.selected} 
+                className={props.selected}
                 />
-                <button type="button" onClick={() => 
+                <button type="button" onClick={() =>
                 {props.addNote(input);
                 setInput({user: "", content: ""});
                 }}>

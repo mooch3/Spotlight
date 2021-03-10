@@ -26,8 +26,13 @@ button {
     height: 50px;
     cursor: pointer;
     outline: none;
-    background-color: #F4F9F9;
+    background-color: transparent;
   }
+
+form {
+    border: 1px solid rgb(158, 158, 158);
+    border-radius: 7px;
+}
 
 form input, form textarea {
     width: 80%;
@@ -37,6 +42,7 @@ form input, form textarea {
     background: #FFC75F;
     outline: none;
     resize: none;
+    
 }
 
 
@@ -89,3 +95,20 @@ form input, form textarea {
 .mint {
     background-color: #99EDC3;
 }
+
+.note {
+    border-radius: 7px;
+    padding: 10px;
+    width: auto;
+    margin: 16px;
+    float: left;
+  }
+  .note h1 {
+    font-size: 1.1em;
+    margin-bottom: 6px;
+  }
+  .note p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+  }

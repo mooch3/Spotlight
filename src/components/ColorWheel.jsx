@@ -1,5 +1,6 @@
 import {React, useState} from 'react';
-import CreateNote from './CreateNote.jsx'
+import CreateNote from './CreateNote.jsx';
+import Note from './Note.jsx'
 
 function ColorWheel() {
 
@@ -10,24 +11,40 @@ function ColorWheel() {
     };
     const colors = ['orange', 'pink', 'purple', 'mint']
 
-    const [selected, setSelected] = useState()
+    const [selected, setSelected] = useState('orange')
     
+    const [notes, setNotes] = useState([]);
+
+    function handleClick(input){
+        setNotes(prevValues => [...prevValues, input])
+    }
 
     return (
         <div className="color-options">
-        {colors.map(t => 
+        {colors.map(color => 
             <Color 
-            key={t}
-            color={t}
-            selected={t === selected}
-            onClick={() => setSelected(t)}
+            key={color}
+            color={color}
+            selected={color === selected}
+            onClick={() => setSelected(color)}
             />
         )}
             
             
             <CreateNote
             selected={selected}
+            addNote={handleClick}
              />
+
+         {notes.map((note, index) => (
+                <Note 
+                key={index}
+                id={index}
+                user={note.user}
+                content={note.content}
+                selected={selected + " note"}
+                />
+            ))}
         </div>
     )
 }

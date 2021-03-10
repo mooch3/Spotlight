@@ -1,0 +1,91 @@
+* {
+    background-color: #F4F9F9;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #A4EBF3;
+    width: 100%;
+    height: 7rem;
+    padding: 1rem 3rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    text-align: left;
+}
+
+button {
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    color: #f5ba13;
+    border: none;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    outline: none;
+    background-color: #F4F9F9;
+  }
+
+form input, form textarea {
+    width: 80%;
+    font-size: 1rem;
+    border-style: none;
+    padding: 8px;
+    background: #FFC75F;
+    outline: none;
+    resize: none;
+}
+
+
+.title-div {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+}
+
+.title {
+    font-family: 'Playfair Display', serif;
+    color: #AAAAAA;
+    margin: 4rem;
+    text-align: center;
+    font-size: 3rem;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.color-options {
+    position: absolute;
+    right: 5%;
+    width: 25%;
+    text-align: center;
+    grid-column-start: 4;
+}
+
+.color-dot {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    margin: 25px 15px;
+    display: inline-block;
+}
+
+.selected {
+    border: solid .5px black;
+}
+
+.orange {
+    background-color: #FFC75F;
+}
+.pink {
+    background-color: #FFB4B4;
+}
+
+.purple {
+    background-color: #FFD0FF;
+}
+
+.mint {
+    background-color: #99EDC3;
+}

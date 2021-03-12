@@ -4,20 +4,36 @@ import Note from './Note.jsx'
 
 function ColorWheel() {
 
-    const Color = ({ selected, color, onClick }) => {
+    const Color = ({ selected, color, onClick}) => {
         return (
             <div onClick={onClick} className={selected ? "color-dot selected " + color : "color-dot " + color}></div>
         );
     };
     const colors = ['orange', 'pink', 'purple', 'mint']
 
-    const [selected, setSelected] = useState('orange')
+    const [selected, setSelected] = useState('orange');
     
     const [notes, setNotes] = useState([]);
 
-    function handleClick(input){
-        setNotes(prevValues => [...prevValues, input])
+    const [input, setInput] = useState({user:"", content:"", color: selected});
+
+    function handleInput(event) {
+        const {name, value} = event.target;
+        setInput({...input, [name]: value, color: selected})
     }
+
+    function handleSelect(color){
+        setSelected(color);
+        setInput({user: input.user, content: input.content, color: color});
+    }
+
+
+    function handleClick(input){
+        setNotes(prevValues => [...prevValues, input]);
+        setInput({user: "", content: "", color: selected});
+    }
+ 
+
 
     return (
         <div className="color-options">
@@ -26,14 +42,19 @@ function ColorWheel() {
             key={color}
             color={color}
             selected={color === selected}
-            onClick={() => setSelected(color)}
+            onClick={() => {
+                handleSelect(color)
+                }}
             />
         )}
             
             
             <CreateNote
             selected={selected}
-            addNote={handleClick}
+            addNote={() => handleClick(input)}
+            handleInput={handleInput}
+            content={input.content}
+            user={input.user}
              />
 
          {notes.map((note, index) => (
@@ -42,7 +63,7 @@ function ColorWheel() {
                 id={index}
                 user={note.user}
                 content={note.content}
-                selected={selected + " note"}
+                selected={note.color + " note"}
                 />
             ))}
         </div>

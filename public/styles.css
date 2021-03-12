@@ -99,13 +99,15 @@ form input, form textarea {
 .note {
     border-radius: 7px;
     padding: 10px;
-    width: auto;
+    width: 300px;
     margin: 16px;
     float: left;
+    word-wrap: break-word;
   }
   .note h1 {
     font-size: 1.1em;
     margin-bottom: 6px;
+    word-wrap: break-word;
   }
   .note p {
     font-size: 1.1em;

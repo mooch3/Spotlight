@@ -1,0 +1,9 @@
+.Logo {
+    font-family: 'Playfair Display', serif;;
+    background-color: #A4EBF3;
+}
+.Logo h1 {
+    background-color: #A4EBF3;
+    padding: 30px;
+    font-size: 2.5em;
+}

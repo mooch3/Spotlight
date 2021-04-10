@@ -1,4 +1,5 @@
 import {React, useState} from 'react';
+import classes from './CreateNote.module.css';
 
 function CreateNote(props){
 
@@ -12,7 +13,7 @@ function CreateNote(props){
 
     
     return (
-        <div>
+        <div className={classes.CreateNote}>
             <form className={props.selected}>
                 <input 
                 onChange={props.handleInput}
@@ -21,7 +22,7 @@ function CreateNote(props){
                 name="user"
                 placeholder="Your name..."
                 value={props.user}
-                className={props.selected}
+                className={props.selected + " noselect"}
                 />
                 <textarea
                 onClick={handleClick}
@@ -31,10 +32,10 @@ function CreateNote(props){
                 placeholder="Add a note..."
                 rows={expanded ? "6" : "1"} 
                 value={props.content}
-                className={props.selected}
+                className={props.selected + " noselect"}
                 />
-                <button type="button" onClick={props.addNote}>
-                    Create Note
+                <button type="button" onClick={props.addNote} className="noselect">
+                    Publish Note
                 </button>
             </form>
         </div>

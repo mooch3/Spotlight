@@ -1,0 +1,9 @@
+.ColorWheel {
+    width: 425px;
+    padding: 25px;
+    text-align: center;
+    align-self: flex-end;
+    z-index: 90;
+    /* TODO: Change height */
+
+}

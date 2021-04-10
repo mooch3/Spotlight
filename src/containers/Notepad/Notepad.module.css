@@ -1,0 +1,5 @@
+.Notepad {
+    display: flex;
+    flex-direction: column;
+    background-color: #F4F9F9;
+}

@@ -1,0 +1,29 @@
+.Note {
+    padding: 20px;
+    float: left;
+    text-align: left; 
+    width: 250px;
+    height: 200px;
+    overflow: auto;
+
+  }
+  .Note h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    width: 90%;
+    
+  }
+  .Note p {
+    font-size: 1em;
+    margin: 10px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    width: 90%;
+    text-align: left;
+  }
+
+  .Note hr {
+      border: 1px solid  #AAAAAA;
+  }

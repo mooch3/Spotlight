@@ -1,0 +1,19 @@
+.Nav {
+    color: #AAAAAA;
+    display: inline-flex;
+    flex-flow: row;
+    list-style: none;
+    width: 100%;
+    background: #A4EBF3;
+    padding: 30px;
+    justify-content: flex-end;
+    z-index: 90;
+    font-size: 1.1em; 
+}
+
+.Nav li {
+    display: flex;
+    margin: 10px 50px;
+    background-color: #A4EBF3;
+}
+

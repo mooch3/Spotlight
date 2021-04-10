@@ -1,5 +1,5 @@
 import React from 'react';
-import ColorWheel from './ColorWheel';
+
 
 function WorkspaceTitle(){
 
@@ -7,8 +7,7 @@ function WorkspaceTitle(){
 
     return (
         <div className="title-div">
-            <h1 className="title">Pride and Prejudice</h1>
-            <ColorWheel />         
+            <h1 className="title">Pride and Prejudice</h1>        
         </div>
     )
 }

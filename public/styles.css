@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+h1 {
+    font-family: 'Playfair Display';
+}
+
 header {
     background-color: #A4EBF3;
     width: 100%;
@@ -16,34 +20,7 @@ header {
     text-align: left;
 }
 
-button {
-    position: relative;
-    float: right;
-    margin-right: 10px;
-    color: #f5ba13;
-    border: none;
-    width: 100px;
-    height: 50px;
-    cursor: pointer;
-    outline: none;
-    background-color: transparent;
-  }
 
-form {
-    border: 1px solid rgb(158, 158, 158);
-    border-radius: 7px;
-}
-
-form input, form textarea {
-    width: 80%;
-    font-size: 1rem;
-    border-style: none;
-    padding: 8px;
-    background: #FFC75F;
-    outline: none;
-    resize: none;
-    
-}
 
 
 .title-div {
@@ -61,25 +38,7 @@ form input, form textarea {
     grid-column-end: 3;
 }
 
-.color-options {
-    position: absolute;
-    right: 5%;
-    width: 25%;
-    text-align: center;
-    grid-column-start: 4;
-}
 
-.color-dot {
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    margin: 25px 15px;
-    display: inline-block;
-}
-
-.selected {
-    border: solid .5px black;
-}
 
 .orange {
     background-color: #FFC75F;
@@ -96,21 +55,16 @@ form input, form textarea {
     background-color: #99EDC3;
 }
 
-.note {
-    border-radius: 7px;
-    padding: 10px;
-    width: 300px;
-    margin: 16px;
-    float: left;
-    word-wrap: break-word;
+  .note-wrapper {
+      position: absolute;
   }
-  .note h1 {
-    font-size: 1.1em;
-    margin-bottom: 6px;
-    word-wrap: break-word;
-  }
-  .note p {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-    word-wrap: break-word;
+
+  .noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
   }

@@ -2,4 +2,22 @@
     display: flex;
     flex-direction: column;
     background-color: #F4F9F9;
+    margin-top: 72px;
+}
+
+.Open {
+    transform: translateY(0);
+    transition-timing-function: ease-out;
+    transition: .3s;
+    z-index: 20;
+    background: transparent;
+    align-self: flex-end;
+    
+}
+
+.Closed {
+    transform: translateY(-125%);
+    transition-timing-function: ease-out;
+    transition: .3s;
+    align-self: flex-end;
 }

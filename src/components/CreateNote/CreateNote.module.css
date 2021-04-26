@@ -8,12 +8,19 @@
 .CreateNote form {
     width: 350px;
     font-size: 1.1em;
-    
+    border-radius: 7px;
+    padding: 20px
 }
+
 
 .CreateNote form input {
     font-size: 1.4em;
-    border: 1px solid #AAAAAA;
+    border: none;
+}
+
+.CreateNote hr {
+    border-bottom: 1px solid  #AAAAAA;
+    align-self: center;
 }
 
 .CreateNote form input, form textarea {
@@ -21,19 +28,18 @@
     padding: 8px;
     outline: none;
     resize: none;
-    
+    border-radius: 7px;
 }
+
 .CreateNote textarea {
     border-style: none;
 }
 
 .CreateNote button {
-    margin: auto;
-    color: black;
+    margin: 15px;
     border: none;
-    width: 100px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
-    outline: none;
-    background-color: transparent;
+    float: right;
   }

@@ -1,0 +1,19 @@
+.Headers h1 {
+    color: #AAAAAA;
+}
+
+.Title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 10%
+}
+
+.SubHeaders {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 40%
+}

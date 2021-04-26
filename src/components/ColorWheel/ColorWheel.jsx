@@ -8,6 +8,7 @@ function ColorWheel(props) {
         props.click(color)
     }
 
+
     return (
         <div className={classes.ColorWheel}>
         {props.colors.map(color => 
@@ -18,22 +19,6 @@ function ColorWheel(props) {
             click={() => handleSelect(color)}
             />
         )}
-            
-            
-
-        {/* notes need to be rendered in main workspace div */}
-         {/* {notes.map((note, index) => (
-             <Draggable key={index}>
-             <Note 
-                key={index}
-                id={index}
-                user={note.user}
-                content={note.content}
-                selected={note.color + " note"}
-                />
-             </Draggable>
-                
-            ))} */}
         </div>
     )
 }

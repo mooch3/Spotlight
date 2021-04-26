@@ -1,43 +1,44 @@
-import {React, useState} from 'react';
+import React from 'react';
 import classes from './CreateNote.module.css';
+import AddButton from '../Buttons/AddButton/AddButton';
+import Aux from '../../Wrappers/Aux/Aux';
 
 function CreateNote(props){
-
-    
-    const [expanded, setExpanded] = useState(false);
-    
-    function handleClick(){
-        setExpanded(true)
-    }
 
 
     
     return (
         <div className={classes.CreateNote}>
-            <form className={props.selected}>
-                <input 
-                onChange={props.handleInput}
-                onClick={handleClick}
-                autoComplete="off"
-                name="user"
-                placeholder="Your name..."
-                value={props.user}
-                className={props.selected + " noselect"}
-                />
+        <form className={props.selected}>
+                {props.expanded && (
+                <Aux>
+                    <input
+                    onChange={props.handleInput}
+                    onClick={props.handleExpand}
+                    autoComplete="off"
+                    name="user"
+                    placeholder="Your name..."
+                    value={props.user}
+                    className={props.selected + " noselect"}
+                    />
+                    <hr/>
+                </Aux>
+
+                )}
                 <textarea
-                onClick={handleClick}
+                onClick={props.handleExpand}
                 onChange={props.handleInput} 
                 autoComplete="off"
                 name="content"
                 placeholder="Add a note..."
-                rows={expanded ? "6" : "1"} 
+                rows={props.expanded ? "6" : "1"} 
                 value={props.content}
                 className={props.selected + " noselect"}
                 />
-                <button type="button" onClick={props.addNote} className="noselect">
-                    Publish Note
-                </button>
+                <AddButton add={props.add} expanded={props.expanded} />
             </form>
+
+
         </div>
     )
 }

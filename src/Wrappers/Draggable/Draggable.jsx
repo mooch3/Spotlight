@@ -17,8 +17,8 @@ const Draggable = ({children}) => {
 
     const {isDragging} = dragInfo
 
-    const handleMouseDown = ({clientX, clientY, screenX}) => {
-        console.log(screenX)
+    const handleMouseDown = ({clientX, clientY, screenY}) => {
+        console.log(screenY)
         if (!isDragging) {
             setDragInfo({
                 ...dragInfo,
@@ -28,15 +28,15 @@ const Draggable = ({children}) => {
         }
     };
 
-    const handleMouseMove = ({clientX, clientY}) => {
+    const handleMouseMove = ({clientX, clientY, screenX, screenY}) => {
         if (isDragging) {
             const {origin, lastTranslation} = dragInfo;
             
             setDragInfo({
                 ...dragInfo,
                 translation: {
-                    x: Math.abs(clientX - (origin.x + lastTranslation.x)),
-                    y: Math.abs(clientY - (origin.y + lastTranslation.y))
+                    x: screenX > 160 ? Math.abs(clientX - (origin.x + lastTranslation.x)) : null,
+                    y: screenY > 210 ? Math.abs(clientY - (origin.y + lastTranslation.y)) : null
                 }
             })
         }

@@ -1,0 +1,7 @@
+.NoteToolbar {
+    width: 100%;
+    height: auto;
+    background: transparent;
+    display: flex;
+    justify-content: flex-end;
+}

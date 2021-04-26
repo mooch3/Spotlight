@@ -1,11 +1,11 @@
 .Nav {
     color: #AAAAAA;
     display: inline-flex;
-    flex-flow: row;
+    flex-flow: column;
     list-style: none;
     width: 100%;
     background: #A4EBF3;
-    padding: 30px;
+    padding: 0;
     justify-content: flex-end;
     z-index: 90;
     font-size: 1.1em; 
@@ -15,5 +15,11 @@
     display: flex;
     margin: 10px 50px;
     background-color: #A4EBF3;
+}
+
+@media (min-width: 750px){
+    .Nav {
+        flex-flow: row;
+    }
 }
 

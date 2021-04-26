@@ -5,8 +5,9 @@
     width: 250px;
     height: 200px;
     overflow: auto;
-
+    border-radius: 7px;
   }
+  
   .Note h2 {
     font-size: 1.5em;
     margin-bottom: 15px;

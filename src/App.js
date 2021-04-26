@@ -1,14 +1,10 @@
 import React from 'react';
-import Notepad from './containers/Notepad/Notepad';
-import Header from './containers/Header/Header';
+import Layout from './containers/Layout/Layout';
 
 
 function App() {
   return (
-  <div>
-    <Header />
-    <Notepad />
-  </div>
+    <Layout />
   )
 }
 

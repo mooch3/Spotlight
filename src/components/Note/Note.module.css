@@ -6,9 +6,13 @@
     height: 200px;
     overflow: auto;
     border-radius: 7px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 80px;
+    left: 50px;
   }
-  
-  .Note h2 {
+
+.Note h2 {
     font-size: 1.5em;
     margin-bottom: 15px;
     word-wrap: break-word;
@@ -16,7 +20,7 @@
     width: 90%;
     
   }
-  .Note p {
+.Note p {
     font-size: 1em;
     margin: 10px;
     word-wrap: break-word;
@@ -25,6 +29,6 @@
     text-align: left;
   }
 
-  .Note hr {
-      border: 1px solid  #AAAAAA;
+.Note hr {
+    border: 1px solid  #AAAAAA;
   }

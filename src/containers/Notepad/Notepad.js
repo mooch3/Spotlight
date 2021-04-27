@@ -3,7 +3,6 @@ import ColorWheel from '../../components/ColorWheel/ColorWheel';
 import CreateNote from '../../components/CreateNote/CreateNote';
 import classes from './Notepad.module.css';
 import Note from '../../components/Note/Note';
-import Draggable from '../../Wrappers/Draggable/Draggable';
 import NotepadToggler from '../../components/ColorWheel/NotepadToggler/NotepadToggler';
 import NoteHeaders from '../../components/NoteHeaders/NoteHeaders';
 import TitleContainer from '../TitleContainer/TitleContainer';
@@ -70,6 +69,8 @@ function Notepad () {
         });
     };
 
+
+
     return (
             <div className={classes.Notepad}>
                 <NotepadToggler showNotepad={handleNotepadToggle} rotate={showNotepad} />
@@ -98,21 +99,18 @@ function Notepad () {
                     handleHeaderInput={handleHeaderInput}
                     addHeaders={() => handleHeaderClick(headerInput)}
                     />
-                    {/* Create headers */}
                 </div>
                 {/* Put notes in a div (noteSpace) */}
                 {
                         notes.map((note, index) => (
-                            <Draggable key={index} >
                                 <Note
+                                key={index}
                                 id={index}
                                 user={note.user}
                                 content={note.content}
                                 selected={note.color}
                                 delete={handleDelete}
                                 />
-                            </Draggable>
-
                             ))
                     }
                     <TitleContainer

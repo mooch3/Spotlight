@@ -25,6 +25,7 @@ function NoteHeaders(props) {
             handleHeaderInput={props.handleHeaderInput}
             headerInput={props.subheader1}
             />
+            
             <NoteHeaderInput
             handleExpand={props.handleExpand}
             expanded={props.expanded}

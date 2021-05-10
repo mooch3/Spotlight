@@ -1,0 +1,9 @@
+.Right {
+    z-index: 2;
+    position: absolute;
+    cursor: ew-resize;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 10px;
+}

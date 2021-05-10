@@ -1,7 +1,7 @@
 import classes from './Note.module.css';
 import { React, useRef } from 'react';
 import NoteToolbar from './NoteToolbar/NoteToolbar';
-import Resizer from '../../Wrappers/Resizer/Resizer';
+import Resizer from '../../Wrappers/DiagonalResizer/Resizer';
 import NoteHeader from './NoteHeader/NoteHeader';
 
 const  Note = (props) => {
@@ -74,14 +74,14 @@ const  Note = (props) => {
             default:
                 break;
         }
-        console.log(parseInt(stickyNote.style.height, 10));
-        if (parseInt(stickyNote.style.height, 10) < 99) {
-            stickyNote.style.height = '100px';
+
+        if (parseInt(stickyNote.style.height, 10) < 85) {
+            stickyNote.style.height = '85px';
         } else if (parseInt(stickyNote.style.height, 10) > 300) {
             stickyNote.style.height = '299px';
         }
-        if (parseInt(stickyNote.style.width, 10) < 200) {
-            stickyNote.style.width = '201px'
+        if (parseInt(stickyNote.style.width, 10) < 160) {
+            stickyNote.style.width = '160px'
         } else if (parseInt(stickyNote.style.width, 10) > 400) {
             stickyNote.style.width = '399px'
         }

@@ -1,0 +1,9 @@
+.NoteBoard {
+    position: fixed;
+    top: 70px;
+    left: 240px;
+    width: 2000px;
+    height: 2000px;
+    overflow-y: scroll;
+    white-space: nowrap;
+}

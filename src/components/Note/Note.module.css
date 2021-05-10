@@ -8,12 +8,12 @@
     border-radius: 7px;
     box-sizing: border-box;
     position: fixed;
-    top: 80px;
-    left: 50px;
+    top: 50%;
+    left: 50%;
   }
 
 .Note h2 {
-    font-size: 1.5em;
+    font-size: 1em;
     margin-bottom: 15px;
     word-wrap: break-word;
     white-space: pre-wrap;
@@ -21,7 +21,7 @@
     
   }
 .Note p {
-    font-size: 1em;
+    font-size: .5em;
     margin: 10px;
     word-wrap: break-word;
     white-space: pre-wrap;

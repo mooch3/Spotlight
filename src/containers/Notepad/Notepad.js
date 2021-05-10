@@ -6,6 +6,8 @@ import Note from '../../components/Note/Note';
 import NotepadToggler from '../../components/ColorWheel/NotepadToggler/NotepadToggler';
 import NoteHeaders from '../../components/NoteHeaders/NoteHeaders';
 import TitleContainer from '../TitleContainer/TitleContainer';
+import Backdrop from '../../components/UI/Backdrop/Backdrop';
+
 
 function Notepad () {
 
@@ -73,6 +75,8 @@ function Notepad () {
 
     return (
             <div className={classes.Notepad}>
+                <Backdrop show={showNotepad} clicked={handleNotepadToggle} />
+
                 <NotepadToggler showNotepad={handleNotepadToggle} rotate={showNotepad} />
                 <div className={showNotepad ? classes.Open : classes.Closed}>
                     <ColorWheel
@@ -100,6 +104,7 @@ function Notepad () {
                     addHeaders={() => handleHeaderClick(headerInput)}
                     />
                 </div>
+
                 {/* Put notes in a div (noteSpace) */}
                 {
                         notes.map((note, index) => (

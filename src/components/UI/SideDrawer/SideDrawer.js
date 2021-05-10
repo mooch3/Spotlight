@@ -1,19 +1,56 @@
-import React from 'react';
+import { React, useRef } from 'react';
 import classes from './SideDrawer.module.css';
-import Nav from '../Nav/Nav';
+import Workspace from '../../UI/SideDrawer/Workspace/Workspace';
+import EWResizer from '../../../Wrappers/EWResizer/EWResizer';
 
 const SideDrawer = (props) => {
-    let attachedClasses = [classes.SideDrawer, classes.Closed]
+    const sideDrawerRef = useRef(null);
 
-    if (props.open) {
-        attachedClasses = [classes.SideDrawer, classes.Open]
+    const Direction = {
+        Left: 'left',
+        Right: 'right'
+    };
+
+    const  attachedClasses = [classes.SideDrawer, classes.Open, 'noselect'];
+
+    const handleResize = (direction, movementX) => {
+    
+        const sideDrawer = sideDrawerRef.current;
+        if (!sideDrawer) return;
+
+        const {width, x} = sideDrawer.getBoundingClientRect();
+        
+        const resizeRight = () => {
+            sideDrawer.style.width = `${width + movementX}px`
+        };
+
+        const resizeLeft = () => {
+            sideDrawer.style.width = `${width - movementX}px`
+            sideDrawer.style.left = `${x + movementX}px`
+        };
+
+        switch (direction) {
+            case Direction.Left:
+                resizeLeft();
+                break;
+
+            case Direction.Right:
+                resizeRight();
+                break;
+
+            default:
+                break;
+        }
+        if (parseInt(sideDrawer.style.width, 10) < 170) {
+            sideDrawer.style.width = '170px';
+        }
     }
 
     return (
-        <div className={attachedClasses.join(' ')} onClick={props.closeMenu}>
-            <h1>Workspaces</h1>
+        <div className={attachedClasses.join(' ')} onClick={props.closeMenu} ref={sideDrawerRef}>
+            <EWResizer onResize={handleResize} />
             <nav>
-                <Nav />
+                <Workspace />
             </nav>
         </div>
     )

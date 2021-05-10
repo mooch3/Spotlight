@@ -1,0 +1,18 @@
+.Workspace {
+    color: #AAAAAA;
+    display: inline-flex;
+    flex-flow: column;
+    list-style: none;
+    width: 100%;
+    background: #A4EBF3;
+    padding: 0;
+    z-index: 90;
+    font-size: 1.1em;
+    align-content: flex-start;
+}
+
+.Workspace li {
+    display: flex;
+    margin: 10px 50px;
+    background-color: #A4EBF3;
+}
